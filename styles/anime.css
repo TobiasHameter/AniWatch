@@ -51,7 +51,10 @@ button{
     background-color: #2e2e2e;
     padding: 10px;
 }
-
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('../assets/background.webp');
+    background-attachment: fixed;
+}
 .stream{
     left: 0;
     margin-top: 60px;

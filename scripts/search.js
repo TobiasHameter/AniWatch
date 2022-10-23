@@ -1,11 +1,12 @@
 const searchInput = document.querySelector("#search");
 const combox = document.querySelector(".autocom-box");
-
+let input = "";
 
 //EventListener
 searchInput.addEventListener("input", (e) => {
     const value = e.target.value
     console.log(value)
+    input=value;
     fetch(`https://gogoanime.herokuapp.com/search?keyw=${value}`)
     .then((response) => response.json())
     .then((animelist) => showAnimes(animelist))
@@ -13,7 +14,8 @@ searchInput.addEventListener("input", (e) => {
 searchInput.addEventListener("keydown", (e) => {
     const key = e.key;
     if(key == "Enter"){
-        location.href = "../pages/search.html?keyw=";
+        console.log(e.target.value);
+        location.href = `../pages/search.html?keyw=${e.target.value}`;
     }
 })
 

@@ -1,0 +1,40 @@
+.animeitem{
+    height: 400px;
+    width: 270px;
+    float: left;
+    text-align: center;
+}
+
+.animeitem img{
+    height: 350px;
+    width:  270px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.animeitem p{
+    font-size: 100%;
+    color: #d4d4d4;
+    text-align: center;
+    max-inline-size: 150px;
+    overflow: hidden;
+}
+
+.results{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+}
+.spacer{
+    min-width: 70%;
+    max-width: 70%;
+}
+.hilfe{
+    justify-content: center;
+}
+
+.nextBtn{
+    position: absolute;
+    top:0;
+    right: 1;
+}

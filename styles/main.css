@@ -5,9 +5,11 @@
 .animeitem{
     height: 300px;
     width: min-content;
+    float: left;
 }
-.card img{
-    height: 315px;
+
+.animeitem img{
+    height: 240px;
     width:  auto;
 }
 
@@ -22,8 +24,10 @@ h2{
     color: #d4d4d4;
     padding-top: 100px;
 }
-
-
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('../assets/background.webp');
+    background-attachment: fixed;
+}
 .carousel {
     height: 300px;
     width: 100%;
