@@ -10,7 +10,7 @@
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 </head>
 <body style="background-color: #141414">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">    
             <a href="../index.html" class="navbar-brand">Test</a>
 
@@ -33,33 +33,43 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <div class="container" id="123">
-        <div class="info">
-            <div class="img">
+        </nav>
 
+        <div class="container-fluid" id="123">
+            <div class="row" info>
+                <div class="col-sm-auto img">
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-auto title">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-auto genres">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-auto synopsis">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="title">
+            <hr style="color: #d4d4d4">
+            <div class="row">
+                <div class="carousel">
+                    <div class="carouselbox" id="test">
+        
+                    </div>
+                    <button class="switchLeft sliderButton" onclick='sliderScrollLeft("test",200)'><</button>
+                    <button class="switchRight sliderButton" onclick='sliderScrollRight("test",200)'>></button>
+                </div>
             </div>
-            <div class="genres">
-
-            </div>
-            <div class="synopsis">
-
+            <div class="row">
+                <div class="stream">
+                </div>
             </div>
         </div>
-        <hr style="color: #d4d4d4">
-        <div class="carousel">
-            <div class="carouselbox" id="test">
 
-            </div>
-            <button class="switchLeft sliderButton" onclick='sliderScrollLeft("test",200)'><</button>
-            <button class="switchRight sliderButton" onclick='sliderScrollRight("test",200)'>></button>
-        </div>
-
-    </div>
-    <div class="stream">
-    </div>
 
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <script src="../scripts/anime.js"></script>

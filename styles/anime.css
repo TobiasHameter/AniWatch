@@ -1,4 +1,7 @@
-.img{
+
+
+
+a.img{
     width: min-content;
     max-height: 300px;
     margin-top: 30px;
@@ -7,18 +10,19 @@
     max-height: 300px;
 }
 .title{
-    margin-left: 250px;
+    margin-left: 0px;
     margin-top: -280px;
     color: #d4d4d4;
 }
 
 .genres{
-    margin-left: 250px;
+    margin-left: 0px;
     color: #d4d4d4;
 }
 .synopsis{
-    margin-left: 250px;
-
+    margin-left: 0px;
+    max-height: 110px;
+    overflow: hidden;
     color: #d4d4d4;
 }
 .epitem.active{
@@ -50,19 +54,13 @@ button{
 
 .stream{
     left: 0;
-    margin-top: 30px;
-    border-color: #d4d4d4;
-    border-width: 1;
-    align-content: center;
-    padding-left: 400px;
+    margin-top: 60px;
+    justify-content: center;
+    display: flex;
 }
 .videoFrame{
-    margin-top: 30px;
-    align-self: center;
-    border-width: 2px;
-    border-color: #d4d4d4;
-}
-.lists{
+    margin-top: 100px;
+    height: 1080px;
 }
 .carousel {
     height: 75px;
@@ -70,6 +68,7 @@ button{
     position: relative;
     margin-top: 10px;
 }
+
 .carousel .switchLeft,
 .carousel .switchRight{
     color: white;
@@ -88,20 +87,21 @@ button{
 }
 .carousel .switchLeft{
     position:absolute;
-    left: -50px;
+    left: 0px;
 }
 .carousel .switchRight{
     position:absolute;
-    right: -50px;
+    right: 0px;
 }
 .carouselbox{
     height: 150px;
-    width: auto;
+    width: 99%;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
     text-align: center;
     padding-bottom: 10px;
+    padding-left: 25px;
     display: flex;
     align-items: center;
 }

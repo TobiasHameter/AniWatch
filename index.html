@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body style="background-color: #141414">
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">    
             <a href="#" class="navbar-brand">Test</a>
 
@@ -32,37 +32,46 @@
                 </ul>
             </div>
         </div>
-    </nav>
+            </nav>
 
     <div class="container" id="123">
         <div class="row">
-            <h2>Recent Release</h2>
-            <hr style="color: white">;
-            <div class = "carousel">
-                <div class="carouselbox recent" id="400">
+            <div class="col col-lg-auto">
+                <h2>Recent Release</h2>
+                <hr style="color: white">;
+                <div class = "carousel big">
+                    <div class="carouselbox recent big" id="400">
 
+                    </div>
+                    <button class="switchLeft sliderButton" onclick='sliderScrollLeft("400",200)'><</button>
+                    <button class="switchRight sliderButton" onclick='sliderScrollRight("400",200)'>></button>
                 </div>
-                <button class="switchLeft sliderButton" onclick='sliderScrollLeft("400",200)'><</button>
-                <button class="switchRight sliderButton" onclick='sliderScrollRight("400",200)'>></button>
             </div>
         </div>
 
         <div class="row">
-            <h2>Popular</h2>
-            <hr style="color: white">;
-            <div class = "carousel">
-                <div class="carouselbox popular" id="500">
+            <div class="col col-lg-auto">
+                <h2>Popular</h2>
+                <hr style="color: white">;
+                <div class = "carousel big">
+                    <div class="carouselbox popular big" id="500">
 
+                    </div>
+                    <button class="switchLeft sliderButton" onclick='sliderScrollLeft("500",200)'><</button>
+                    <button class="switchRight sliderButton" onclick='sliderScrollRight("500",200)'>></button>
                 </div>
-                <button class="switchLeft sliderButton" onclick='sliderScrollLeft("500",200)'><</button>
-                <button class="switchRight sliderButton" onclick='sliderScrollRight("500",200)'>></button>
             </div>
         </div>
     </div>
 
+    
+
+    
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="scripts/index.js"></script>
-<script src="../scripts/carouselcontroller.js"></script>
+<script src="scripts/carouselcontroller.js"></script>
 <script src="scripts/search.js"></script>
 </body>
 

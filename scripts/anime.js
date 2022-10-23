@@ -65,7 +65,7 @@ function showInfo(animeInfo){
 function showStream(streamInfo){
     stream_el.insertAdjacentHTML(
         "beforeend",
-        `<iframe class="videoFrame" src="${streamInfo.Referer}" width="1080", height="720" allowFullscreen></iframe>`
+        `<iframe class="videoFrame" src="${streamInfo.Referer}" width="80%", height="700px" allowFullscreen></iframe>`
     )
    }
 
