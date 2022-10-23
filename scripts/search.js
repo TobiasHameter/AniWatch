@@ -1,5 +1,8 @@
 const searchInput = document.querySelector("#search");
 const combox = document.querySelector(".autocom-box");
+
+
+//EventListener
 searchInput.addEventListener("input", (e) => {
     const value = e.target.value
     console.log(value)
@@ -7,7 +10,15 @@ searchInput.addEventListener("input", (e) => {
     .then((response) => response.json())
     .then((animelist) => showAnimes(animelist))
 });
+searchInput.addEventListener("keydown", (e) => {
+    const key = e.key;
+    if(key == "Enter"){
+        location.href = "../pages/search.html?keyw=";
+    }
+})
 
+
+// Display Content
 function showAnimes(list){
     console.log(list);
     const com1 = document.getElementById("com0");

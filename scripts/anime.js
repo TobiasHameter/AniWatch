@@ -11,9 +11,12 @@ var scrollPerClick;
 var ImagePadding = 20;
 var scrollAmount = 0;
 var epnum = 0;
-fetch(`https://gogoanime.herokuapp.com/anime-details/${id}`)
-.then((response) => response.json())
-.then((animelist) => showInfo(animelist));
+
+getAnimeDetails();
+getStreamDetails();
+
+
+// Display Content
 
 function showInfo(animeInfo){
     const anime_img_el = document.createElement("img");
@@ -59,39 +62,6 @@ function showInfo(animeInfo){
     scrollPerClick = 200;
 
 }
-
-
-if(epid != null){
-    fetch(`https://gogoanime.herokuapp.com/vidcdn/watch/${epid}`)
-    .then((response) => response.json())
-    .then((animelist) => showStream(animelist));
-}
-
-
-
-
-
-function sliderScrollLeft(){
-    sliders.scrollTo({
-        top:0,
-        left: (scrollAmount -= scrollPerClick),
-        behavior: "smooth"
-    });
-    if(scrollAmount < 0){
-        scrollAmount = 0;
-    }
-}
-
-function sliderScrollRight(){
-    if(scrollAmount<= sliders.scrollWidth - sliders.clientWidth){
-        sliders.scrollTo({
-            top: 0,
-            left: (scrollAmount+=scrollPerClick),
-            behavior: "smooth"
-        });
-    }
-}
-
 function showStream(streamInfo){
     stream_el.insertAdjacentHTML(
         "beforeend",
@@ -99,8 +69,27 @@ function showStream(streamInfo){
     )
    }
 
+
+// GET Parameters from URL
+
 function getParameter(parameterName){
     let parameters = new URLSearchParams(window.location.search);
     return parameters.get(parameterName);
 
+}
+
+
+// API
+
+function getAnimeDetails(){
+    fetch(`https://gogoanime.herokuapp.com/anime-details/${id}`)
+    .then((response) => response.json())
+    .then((animelist) => showInfo(animelist));
+}
+function getStreamDetails(){
+    if(epid != null){
+        fetch(`https://gogoanime.herokuapp.com/vidcdn/watch/${epid}`)
+        .then((response) => response.json())
+        .then((animelist) => showStream(animelist));
+    }
 }
