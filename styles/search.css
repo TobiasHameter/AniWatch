@@ -1,19 +1,20 @@
 .wrapper{
-    max-width: 450px;
-    margin-top: -20px;
-    margin-right: 200px;
-    margin-left: -380px;
-    position:  absolute;
-    z-index: 3;
+    margin-left: 2em;
+    max-width: 20em;
+    display: inline-block;
+    z-index:10;
+    position: relative;
 }
 
 .wrapper .search-input{
+
     background: #1f1f1f;
     color: #d4d4d4;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 1%;
     padding-bottom: 50x;
     box-shadow: 0px 1px 5px 3px rgba(0,0,0,12);
+    z-index: 10;
 }
 .search-input input{
     background-color: #1f1f1f;
@@ -22,7 +23,7 @@
     width: 100%;
     outline: none;
     border: none;
-    border-radius: 15px;
+    border-radius: 2%;
     padding: 0 60px 0 20px;
     font-size: 18px;
     margin-top: 0px;

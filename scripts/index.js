@@ -1,5 +1,5 @@
-const slidersRecent = document.querySelector(".recent");
-const slidersPopular = document.querySelector(".popular");
+const slidersRecent = document.querySelector(".slide");
+const slidersPopular = document.getElementById("2");
 var scrollPerClickRecent;
 var ImagePadding = 20;
 var scrollPerClickPopular;
@@ -16,7 +16,7 @@ function showPopularAnimes(popularList){
     popularList.map(function(cur, index){
         slidersPopular.insertAdjacentHTML(
             "beforeend",
-            `<a href="pages/anime.html?id=${cur.animeId}" class="animeitem"><img class="img2-${index} slider-img" src="${cur.animeImg}" /><p>${cur.animeTitle}</p></a>`
+            `<a href="pages/anime.html?id=${cur.animeId}" class="item"><div><img class="img2-${index} slider-img" src="${cur.animeImg}" /><p>${cur.animeTitle}</p></div></a>`
         )
     })
     scrollPerClickPopular = document.querySelector(".img2-1").clientWidth + ImagePadding;
@@ -26,7 +26,7 @@ function showRecentAnimes(recentList){
         console.log(cur.animeId);
         slidersRecent.insertAdjacentHTML(
             "beforeend",
-            `<a href="pages/anime.html?id=${cur.animeId}" class="animeitem"><img class="img1-${index} slider-img" src="${cur.animeImg}" /><p>${cur.animeTitle}</p></a>`
+            `<a class="item" href="pages/anime.html?id=${cur.animeId}"><div><img class="img1-${index} slider-img" src="${cur.animeImg}" /><p>${cur.animeTitle}</p></div></a>`
         )
     })
 

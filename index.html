@@ -4,75 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/all.css">
     <link rel="stylesheet" href="styles/search.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="background">
-    </div>
-            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div class="container">    
-            <a href="#" class="navbar-brand">Test</a>
-
-            <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navmenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div class="wrapper">
-                            <div class="search-input">
-                                <input class="search-bar" id="search" type="text" placeholder="Search...">
-                                <div class="autocom-box">
-                                </div>
-                            </div>
+    <div class="container main">
+            <header>
+            <div class="container">
+                <div class="row">
+                <div class="col col-sm-auto">
+                <h2>AniWatch</h2>
+                </div>
+                <div class="col col-md-auto">
+                <div class="wrapper">
+                    <div class="search-input">
+                        <input class="search-bar" id="search" type="text" placeholder="Search...">
+                        <div class="autocom-box">
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                </div>
+                </div>
             </div>
-        </div>
-            </nav>
-
-    <div class="container" id="123">
-        <div class="row">
-            <div class="col col-lg-auto">
+            </header>
+            <div class="body">
                 <h2>Recent Release</h2>
-                <hr style="color: white">;
-                <div class = "carousel big">
-                    <div class="carouselbox recent big" id="400">
-
-                    </div>
-                    <button class="switchLeft sliderButton" onclick='sliderScrollLeft("400",200)'><</button>
-                    <button class="switchRight sliderButton" onclick='sliderScrollRight("400",200)'>></button>
+                <hr style="color: white">
+                <div class = "slide" id="1">
                 </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col col-lg-auto">
                 <h2>Popular</h2>
-                <hr style="color: white">;
-                <div class = "carousel big">
-                    <div class="carouselbox popular big" id="500">
-
-                    </div>
-                    <button class="switchLeft sliderButton" onclick='sliderScrollLeft("500",200)'><</button>
-                    <button class="switchRight sliderButton" onclick='sliderScrollRight("500",200)'>></button>
+                <hr style="color: white">
+                <div class = "slide" id="2">
                 </div>
             </div>
-        </div>
     </div>
-
-    
-
-    
+<script>
+    $(document).on("dragstart", function() {
+     return false;
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="scripts/index.js"></script>
 <script src="scripts/carouselcontroller.js"></script>
 <script src="scripts/search.js"></script>
+<script src="scripts/slider.js"></script>
 </body>
 
 </html>
