@@ -15,7 +15,7 @@ searchInput.addEventListener("keydown", (e) => {
     const key = e.key;
     if(key == "Enter"){
         console.log(e.target.value);
-        location.href = `../pages/search.html?keyw=${e.target.value}`;
+        location.href = `pages/search.html?keyw=${e.target.value}`;
     }
 })
 
